@@ -1,0 +1,8 @@
+# Ignoring datesets files
+datasets/
+
+# Ignoring models files
+models/
+
+# Ignoring temp files
+temp/

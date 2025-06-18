@@ -1,0 +1,20 @@
+[project]
+name = "jarvis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faster-whisper>=1.1.1",
+    "gtts>=2.5.4",
+    "huggingface-hub>=0.33.0",
+    "numpy>=2.3.0",
+    "pyaudio>=0.2.14",
+    "pyttsx3>=2.98",
+    "sounddevice>=0.5.2",
+    "speechrecognition>=3.14.3",
+    "torch>=2.7.1",
+    "transformers>=4.52.4",
+    "vosk>=0.3.45",
+    "webrtcvad>=2.0.10",
+]
