@@ -1,6 +1,3 @@
-# Ignoring datesets files
-datasets/
-
 # Ignoring models files
 models/
 
