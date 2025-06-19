@@ -9088,7 +9088,7 @@
           "text": "I want toi hear some "
         },
         {
-          "text": "Pop Punk Perfection í ¼í½•",
+          "text": "Pop Punk Perfection ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
           "entity": "playlist"
         },
         {
@@ -23190,31 +23190,6 @@
         {
           "text": "Ler Lalonde",
           "entity": "artist"
-        }
-      ]
-    },
-    {
-      "data": [
-        {
-          "text": "Play the next "
-        },
-        {
-          "text": "ep",
-          "entity": "music_item"
-        },
-        {
-          "text": " by "
-        },
-        {
-          "text": "Video Game Pianist",
-          "entity": "artist"
-        },
-        {
-          "text": " on "
-        },
-        {
-          "text": "netflix",
-          "entity": "service"
         }
       ]
     },
