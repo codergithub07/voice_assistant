@@ -41,7 +41,7 @@ class IntentClassifier:
 intent_classifier = IntentClassifier(model_path="trained_models")
 
 # Load Vosk model
-model = Model(r"models/vosk-model-small-en-us-0.15")  
+model = Model(r"vosk_models/vosk-model-small-en-us-0.15")  
 rec = KaldiRecognizer(model, 16000)
 
 # Configure audio stream
@@ -88,7 +88,7 @@ while True:
             try:
                 intent, confidence = intent_classifier.predict_with_confidence(text)
                 
-                if confidence > 0.6:  # Confidence threshold
+                if confidence > 0.55:  # Confidence threshold
                     handle_intent(intent, text)
                 else:
                     print(f"Low confidence ({confidence:.2f}) - please repeat")
