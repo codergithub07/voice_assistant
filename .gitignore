@@ -1,5 +1,7 @@
 # Ignoring models files
-models/
+vosk_models/
 
 # Ignoring temp files
 temp/
+
+vosk_model_improvement
