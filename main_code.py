@@ -50,8 +50,7 @@ def callback(indata, frames, time, status):
     if status: print(status)
     q.put(bytes(indata))
 
-stream = sd.RawInputStream(samplerate=16000, blocksize=8000, dtype='int16',
-                           channels=1, callback=callback)
+stream = sd.RawInputStream(samplerate=16000, blocksize=8000, dtype='int16', channels=1, callback=callback)
 stream.start()
 
 def handle_intent(intent, text):
@@ -71,7 +70,7 @@ def handle_intent(intent, text):
     elif intent == "GetWeather":
         # Extract location and get weather
         print("Getting weather...")
-        
+
     # Add more intent handlers...
 
 print("Listening... Say something!")
