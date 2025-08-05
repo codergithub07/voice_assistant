@@ -1,3 +1,7 @@
 # Company Aim
 
-## Neuramics aims to solve public problems using machine learning and artificial intelligence, such as problems related to traffic (including but not limited to signal delay management, prioriy to emergency services vehicles like ambulance), public safety, and personalized AI models for the safety of private property. Our system will work in real-time and it will alert the respective authorities if any unusual activity happens. No need to install any special software in mobiles (if the user wants only sms alerts), and the system can be integrated with the camera systems already in use.
+### Neuramics aims to solve public problems using machine learning and artificial intelligence, such as problems related to traffic (including but not limited to signal delay management, prioriy to emergency vehicles like ambulance, accident detection, "no helmet" detection), public safety (includes public threat detection like fight and weapons, women harassment, etc) and personalized AI models for private usage (homes, and other private properties). Our system will work in real-time and it will alert the respective authorities if any unusual activity happens. The system can be integrated with the camera systems already in use so new installations is not required.
+
+## Future Scope
+
+### In our future scope, we will be providing machine learning and artificial intelligence solutions to other companies and startups.
