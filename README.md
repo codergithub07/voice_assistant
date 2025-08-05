@@ -12,5 +12,5 @@
 
 # Limitations
 
-### Survillience systems are not present everywhere, our project may not work at those places.
-### 
+### Survillience systems are not present everywhere, so our security project may not work at those places.
+### Lack of datasets for regional languages.
