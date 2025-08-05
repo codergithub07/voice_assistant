@@ -8,4 +8,9 @@
 
 # Scalability
 
-### Our aim is to keep our project scalable such that it can work not only on regional or national level, but also solve the global issues.
+### Our aim solves the problems which are not only limited to regional or national level, but also solve the global issues.
+
+# Limitations
+
+### Survillience systems are not present everywhere, our project may not work at those places.
+### 
