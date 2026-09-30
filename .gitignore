@@ -1,82 +1,67 @@
-# ==========================================
-# Python Bytecode & Build Artifacts
-# ==========================================
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 build/
 dist/
-develop-eggs/
-downloads/
 eggs/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
 
-# ==========================================
-# Virtual Environments
-# ==========================================
+# Virtual environments
 .venv/
+env/
 venv/
 ENV/
-env/
 
-# ==========================================
-# Environment Variables & Secrets
-# ==========================================
+# Secrets and environment variables
 .env
-.env.local
-.env.*.local
-*.key
-*.pem
+.env.*
+!.env.example
 
-# ==========================================
-# Large Pretrained Models & Model Directories
-# ==========================================
+# Large model binaries and downloaded models
 vosk_models/
 models/
-model_copy/
+*.bin
+*.safetensors
 *.onnx
 
-# ==========================================
-# Large Datasets & Raw Scraped Data
-# ==========================================
-datasets/
-
-# ==========================================
-# Scratch, Audio Artifacts & Temporary Files
-# ==========================================
+# Temporary, scratch, and improvement folders
 temp/
-script/
 vosk_model_improvement/
+transcribed_text/
+script/
+
+# Datasets and raw media
+datasets/
 *.wav
 *.mp3
+*.mkv
+*.flac
+*.ogg
 audio.mp3
-transcribed_text/
-*.log
 
-# ==========================================
-# IDE & System Files
-# ==========================================
-.vscode/
+# Microsoft Office temporary lock files
+~$*.docx
+
+# Testing and linting caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE and OS files
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
 .DS_Store
 Thumbs.db
-
-# ==========================================
-# Testing & Type-checking Caches
-# ==========================================
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
