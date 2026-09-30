@@ -1,11 +1,82 @@
-# Ignoring models files
-vosk_models/
+# ==========================================
+# Python Bytecode & Build Artifacts
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Ignoring temp files
-temp/
-
-vosk_model_improvement
-
+# ==========================================
+# Virtual Environments
+# ==========================================
 .venv/
+venv/
+ENV/
+env/
 
-datasets
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ==========================================
+# Large Pretrained Models & Model Directories
+# ==========================================
+vosk_models/
+models/
+model_copy/
+*.onnx
+
+# ==========================================
+# Large Datasets & Raw Scraped Data
+# ==========================================
+datasets/
+
+# ==========================================
+# Scratch, Audio Artifacts & Temporary Files
+# ==========================================
+temp/
+script/
+vosk_model_improvement/
+*.wav
+*.mp3
+audio.mp3
+transcribed_text/
+*.log
+
+# ==========================================
+# IDE & System Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Testing & Type-checking Caches
+# ==========================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

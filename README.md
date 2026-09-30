@@ -1,16 +1,82 @@
-# Company Aim
+# Jarvis Voice Assistant (mark_0)
 
-### Neuramics aims to solve public problems using machine learning and artificial intelligence, such as problems related to traffic (including but not limited to signal delay management, prioriy to emergency vehicles like ambulance, accident detection, "no helmet" detection), public safety (includes public threat detection like fight and weapons, women harassment, etc) and personalized AI models for private usage (homes, and other private properties). Our system will work in real-time and it will alert the respective authorities if any unusual activity happens. The system can be integrated with the camera systems already in use so new installations is not required.
+An offline-first, modular desktop voice assistant powered by Vosk speech recognition, scikit-learn intent classification, and Linux system automation.
 
-# Future Scope
+## Project Structure
 
-### In our future scope, we will be providing machine learning and artificial intelligence solutions to other companies and startups.
+```
+mark_0/
+├── src/
+│   └── jarvis/
+│       ├── __init__.py
+│       ├── config.py              # Centralized configuration (audio, paths, thresholds)
+│       ├── audio/
+│       │   ├── __init__.py
+│       │   └── stream.py          # Real-time microphone audio capture stream
+│       ├── stt/
+│       │   ├── __init__.py
+│       │   ├── base.py            # Base ASR interface
+│       │   └── vosk_stt.py        # Vosk KaldiRecognizer STT implementation
+│       ├── tts/
+│       │   ├── __init__.py
+│       │   └── engine.py          # Speech synthesis engine (pyttsx3 / gTTS)
+│       ├── nlp/
+│       │   ├── __init__.py
+│       │   ├── preprocessor.py    # Unified text preprocessing (lemmatization & cleaning)
+│       │   └── classifier.py      # Intent classifier with confidence scoring
+│       ├── skills/
+│       │   ├── __init__.py
+│       │   ├── registry.py        # Dynamic skill dispatcher
+│       │   ├── vlc_player.py      # VLC media player D-Bus MPRIS & file launcher
+│       │   ├── weather.py         # OpenWeatherMap weather reporting
+│       │   └── web_search.py      # Web navigation and Google / YouTube searches
+│       └── core/
+│           ├── __init__.py
+│           └── assistant.py       # Main event loop orchestrator
+├── scripts/                       # Training, preprocessing & scraping tools
+│   ├── train_intent.py            # SNIPS dataset training pipeline
+│   ├── scrape_movies.py           # Movie name scraper (IMDb, TMDB, Letterboxd)
+│   ├── preprocess_movies.py       # Movie titles lexicon preprocessing
+│   └── audio_processor.py         # Audio normalization and silence chunking
+├── experiments/                   # Prototypes & research code
+│   ├── emotion_detection.py       # Speech emotion recognition (Wav2Vec2)
+│   └── whisper_test.py            # Faster-Whisper streaming test
+├── trained_models/                # Serialized intent models (.joblib)
+├── vosk_models/                   # Downloaded Vosk acoustic/language models
+├── datasets/                      # Training datasets (SNIPS, EMO-DB)
+├── main.py                        # Application entry point
+├── .env.example                   # Environment configuration template
+├── .gitignore                     # Git ignore rules
+└── pyproject.toml                 # Dependencies and project metadata
+```
 
-# Scalability
+## Quickstart
 
-### Our aim solves the problems which are not only limited to regional or national level, but also solve the global issues.
+### 1. Installation
+Install dependencies using `uv`:
+```bash
+uv sync
+```
+Or with standard `pip`:
+```bash
+pip install -e .
+```
 
-# Limitations
+### 2. Configuration
+Copy the `.env.example` file to `.env`:
+```bash
+cp .env.example .env
+```
+Fill in any desired options (e.g. `OPENWEATHER_API_KEY`, `MEDIA_DIR`).
 
-### Survillience systems are not present everywhere, so our security project may not work at those places.
-### Lack of datasets for regional languages.
+### 3. Running Jarvis
+Run the main assistant loop:
+```bash
+python main.py
+```
+
+### 4. Training Intent Classifier
+To retrain the intent classification model using the SNIPS dataset:
+```bash
+python scripts/train_intent.py
+```
