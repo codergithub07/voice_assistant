@@ -5,3 +5,7 @@ vosk_models/
 temp/
 
 vosk_model_improvement
+
+.venv/
+
+datasets
